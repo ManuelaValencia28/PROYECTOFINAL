@@ -1,0 +1,57 @@
+/* login.css */
+
+body {
+    background-image: url('../Img_proyecto/fondo_spa.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Evita que la imagen se desplace al desplazarse la página */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  }
+  
+  .login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-left: auto;
+  }
+  
+  .image-container {
+    flex: 1;
+    padding: 150px;
+    text-align: center;
+    opacity: 0.09; /* ajustar la opacidad para hacer la imagen más desvanecida */
+  }
+  
+  .image {
+    width: 800%; /* Ajusta el tamaño de la imagen  */
+  }
+  
+  .form-container {
+    flex: 10;
+    padding: 20px;
+    text-align: center;
+    margin-left: 600px;
+    align-items: center;
+  }
+  
+ .form-container .title {
+  font-family: 'Arvo'; /* Aplica la fuente 'Arvo' con una fuente de respaldo */
+  font-size: 50px; /* Tamaño de fuente */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.form-container .label{
+  font-family: 'Be Vietnam Pro';
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.form-container .button{
+  background-color: #6a3333a6;
+  color: rgb(255, 255, 255);
+  font-family: 'Be Vietnam';
+  margin: auto;
+}
+
