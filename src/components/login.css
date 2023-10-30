@@ -1,7 +1,6 @@
 /* login.css */
 
 body {
-    background-image: url('../Img_proyecto/fondo_spa.jpg');
     background-size: cover; /* Ajusta la imagen para cubrir la pantalla */
     background-position: center; /* Centra la imagen */
     background-attachment: fixed; /* Evita que la imagen se desplace al desplazarse la página */
@@ -36,8 +35,8 @@ body {
   }
   
  .form-container .title {
-  font-family: 'Arvo'; /* Aplica la fuente 'Arvo' con una fuente de respaldo */
-  font-size: 50px; /* Tamaño de fuente */
+  font-family: 'Arvo'; 
+  font-size: 50px; 
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -46,6 +45,7 @@ body {
   font-family: 'Be Vietnam Pro';
   font-size: 25px;
   margin-bottom: 10px;
+  
 }
 
 .form-container .button{

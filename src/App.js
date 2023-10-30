@@ -1,18 +1,18 @@
 import Login from './components/login';
-import Services from './components/services';
+import Header from './components/header';
 import Diary from './components/diary';
-import Administer from './components/administer';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Services from './components/services';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
     <Router>
-      <Login />
+      <Header/>
       <Routes>
-        <Route path="services" element={<Services />} />
+        <Route path="login" element={<Login/>} />
         <Route path="diary" element={<Diary />} />
-        <Route path="administer" element={<Administer />} />
+        <Route path="services" element={<Services />} />
       </Routes>
     </Router>
   );
