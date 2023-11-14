@@ -1,7 +1,7 @@
 import { Button, CssBaseline, makeStyles } from '@material-ui/core'
 import React, { useState } from 'react'
 import Banner from './Banner'
-import RoomCard from './RoomCard'
+import Menu from './Menu'
 import DatePicker from './DatePicker'
 
 
@@ -18,16 +18,16 @@ const Services = () => {
             showdates ? "Ocultar" : " Buscar Citas"
            }
           </Button>
-          {
-            showdates &&  <DatePicker/>
-          }
         </div>
+        {
+          showdates &&  <DatePicker/>
+        }
         <Banner/>
         <div className={classes.section}>
-          <RoomCard/>
-          <RoomCard/>
-          <RoomCard/>
-          <RoomCard/>
+          <Menu/>
+          <Menu/>
+          <Menu/>
+          <Menu/>
         </div>
     </div>
     </>
@@ -41,15 +41,23 @@ const useStyle = makeStyles((theme) => ({
     flexDirection: "column",
 
   },
-  dates: {
-    display: "flex",
-    flexDirection: "column", 
-    "& button": {
-      border: "1px solid #ccc",
-      backgroundColor: "#fff",
-      color: "rgba(194, 142, 163, 0.8)",
-    }
-  }
-}))
+    dates: {
+      display: "flex",
+      flexDirection: "column", 
+      "& button": {
+        border: "1px solid #ccc",
+        backgroundColor: "#fff",
+        color: "rgba(255, 142, 163, 0.8)",
+        textTransform: "inherit", 
+        fontSize: "1.2rem", 
+        fontWeight: "bold",
+      },
+      "& button:hover": { 
+        backgroundColor: "rgba(255, 142, 163, 0.8)",
+        color: "#fff",
+      }
+    },
+  }))
+  
 
 export default Services
