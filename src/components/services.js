@@ -1,9 +1,9 @@
-import { Button, CssBaseline, makeStyles } from '@material-ui/core'
+import { Button, CssBaseline, Grid, makeStyles } from '@material-ui/core'
 import React, { useState } from 'react'
+import mockData from '../mockData'
 import Banner from './Banner'
 import Menu from './Menu'
 import DatePicker from './DatePicker'
-
 
 const Services = () => {
   const classes= useStyle()
@@ -23,23 +23,30 @@ const Services = () => {
           showdates &&  <DatePicker/>
         }
         <Banner/>
-        <div className={classes.section}>
-          <Menu/>
-          <Menu/>
-          <Menu/>
-          <Menu/>
-        </div>
+        <Grid container className={classes.section} spacing={3}>
+          {
+            mockData.map(({src, title, description}, index) => (
+              <Grid item sm="6" md="4" lg="3">
+                 <Menu src={src} 
+                     title={title} 
+                     description={description} 
+                     key={index}/>
+              </Grid>
+              
+             ))
+          }
+        </Grid>
     </div>
     </>
   )
 }
-
+//pasar un objeto con imagenes, y descripcion
 
 const useStyle = makeStyles((theme) => ({
   root:{
     display: "flex",
     flexDirection: "column",
-
+    margin: theme.spacing(2)
   },
     dates: {
       display: "flex",

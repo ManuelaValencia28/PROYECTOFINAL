@@ -5,6 +5,7 @@ import SearchIcon from "@material-ui/icons/Search"
 import MenuIcon from "@material-ui/icons/Menu"
 import { Link } from 'react-router-dom'
 
+
 const Header = () => {
 
   const [mobile, setMobile] = useState(true)
@@ -72,17 +73,19 @@ const Header = () => {
 
   const displayDesktop = () =>(
       <Toolbar className={classes.toolbar}>
-          <Link to="/">
+          <Link to="/services">
              <img src={logo} className={classes.logo}></img>
          </Link>
         <div className={classes.center}>
         <InputBase fullWidth placeholder="Busca aquí..."  inputProps={{className: classes.input}}/>
         <SearchIcon/>
         </div>
-        <div className={classes.right}> 
-            <Typography>Iniciar Sesión</Typography>
-            <Avatar className={classes.avatar}></Avatar>
-        </div>
+        <div className={classes.right}>
+        <Typography>Iniciar Sesión</Typography>
+        <Link to="/login">
+        <Avatar className={classes.avatar} />
+        </Link>
+      </div>
       </Toolbar>
     )
     
@@ -92,6 +95,7 @@ const Header = () => {
        mobile ? displayMobile() : displayDesktop()
       }
     </AppBar>
+    
   )
 }
 

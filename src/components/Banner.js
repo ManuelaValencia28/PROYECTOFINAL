@@ -10,6 +10,8 @@ const Banner = () => {
         <Button variant='contained'>Nuestros servicios</Button>
       </div>
     </div>
+
+    
   )
 }
 
@@ -40,7 +42,8 @@ const useStyle = makeStyles((theme) => ({
         backgroundColor: "#fff",
         color: "rgba(194, 142, 163, 0.8)",
       }
-    }
+    },
+
 }))
 
 export default Banner
